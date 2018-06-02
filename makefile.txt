@@ -1,0 +1,10 @@
+all: README.md
+
+README.md: guessinggame.sh
+	echo "## The Unix Workbench kurs - Projekat " > README.md
+	echo "\n**Opis projekta**: napravi program nazvan *guessinggame.sh*. Ovaj program treba ucestalo da pita korisnika da pogodi broj fajlova na trenutnom direktorijumu, sve dok korisnik ne pogodi pravi broj. Korisnik treba da je informisan ako je dao veci broj ili manji od pravog broja fajlova.Jednom kad korisnik pogodi pravi broj fajlova na trenutnom dikrektorijumu treba biti nagradjen." >> README.md
+	echo -n "\n**Napravi datum**: " >> README.md
+	date >> README.md
+	echo -n "\n**Broj linija u guessinggame.sh:** " >> README.md
+	grep -c '' guessinggame.sh >> README.md
+
